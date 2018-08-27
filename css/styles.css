@@ -14,8 +14,8 @@ body {
   height: 100%;
   background-color: #E2EDE2;
   font-family: "HelveticaNeueCyr-UltraLight";
-  -webkit-perspective: 200px;
-          perspective: 200px;
+  -webkit-perspective: 300px;
+          perspective: 300px;
   margin: 0 auto;
 }
 
@@ -85,8 +85,8 @@ body {
           align-items: center;
   position:absolute;
   -webkit-animation:animateform;
-  -webkit-animation-duration: 0.5s;
-          animation:animateform 0.5s;
+  -webkit-animation-duration: 0.8s;
+          animation:animateform 0.8s;
     }
 
 @-webkit-keyframes animateform{
@@ -132,11 +132,12 @@ body {
           justify-content: center;
   max-width: 100px;
   height: 100px;  
+  opacity: 0.8;
   margin-top: -12%;
   border-radius: 20px;
   -webkit-animation:animatelogo;
-  -webkit-animation-duration: 1.2s;
-          animation:animatelogo 1.2s;
+  -webkit-animation-duration: 1.1s;
+          animation:animatelogo 1.1s;
   position: absolute;
   z-index: 1;
 }
@@ -160,16 +161,14 @@ body {
 
 @keyframes animatelogo{
   from{
-    opacity:0;
     -webkit-perspective: 200px;
             perspective: 200px;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-    -webkit-transform: rotateX(25deg);
-            transform: rotateX(25deg);
+    -webkit-transform: rotateX(40deg);
+            transform: rotateX(40deg);
     } 
   to{
-    opacity:1;
     -webkit-perspective: none;
             perspective: none;
   }
@@ -186,6 +185,37 @@ body {
   position: relative;
 }
 
+@-webkit-keyframes animatelogopart{
+  from {
+    opacity: 0;
+    top: -200px; 
+    -webkit-transform: rotate3d(1, 0, 0, 0.25turn); 
+            transform: rotate3d(1, 0, 0, 0.25turn);
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+    -webkit-transform: rotate3d(1, 0, 0, 1turn);
+            transform: rotate3d(1, 0, 0, 1turn);
+  }
+}
+@keyframes animatelogopart{
+  from {
+    opacity: 0;
+    top: -200px; 
+    -webkit-transform: rotate3d(1, 0, 0, 0.25turn); 
+            transform: rotate3d(1, 0, 0, 0.25turn);
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+    -webkit-transform: rotate3d(1, 0, 0, 1turn);
+            transform: rotate3d(1, 0, 0, 1turn);
+  }
+}
+
 .orange {
   width: 27px;
   height: 27px;
@@ -193,46 +223,12 @@ body {
   margin-top: 15px;
   background-color: #F8911D;
   border-radius: 5px;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 2;
-  -webkit-animation:animateorange;
-  -webkit-animation-duration: 1.4s;
-          animation:animateorange 1.4s;
+  -webkit-animation:animatelogopart;
+  -webkit-animation-duration: 1.2s;
+          animation:animatelogopart 1.2s;
   position: absolute;
-}
-
-@-webkit-keyframes animateorange{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 200px;
-            perspective: 200px;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
-}
-
-@keyframes animateorange{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 200px;
-            perspective: 200px;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
 }
 
 .pink {
@@ -243,50 +239,12 @@ body {
   margin-top: 28px;
   background-color: #D1369C;
   border-radius: 5px;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 3;
   position: absolute;
-  -webkit-animation:animatepink;
-  -webkit-animation-duration: 1.3s;
-          animation:animatepink 1.3s;
-}
-
-@-webkit-keyframes animatepink{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 100px;
-            perspective: 100px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
-}
-
-@keyframes animatepink{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 100px;
-            perspective: 100px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
+  -webkit-animation:animatelogopart;
+  -webkit-animation-duration: 1.1s;
+          animation:animatelogopart 1.1s;
 }
 
 .blue {
@@ -296,52 +254,12 @@ body {
   margin-top: 42px;
   background-color: #3E9FFD;
   border-radius: 5px;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 5;
   position: absolute;
-  -webkit-animation:animateblue;
-  -webkit-animation-duration: 1.1s;
-          animation:animateblue 1.1s;
-}
-
-@-webkit-keyframes animateblue{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 200px;
-            perspective: 200px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
-
-}
-
-@keyframes animateblue{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 200px;
-            perspective: 200px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
-
+  -webkit-animation:animatelogopart;
+  -webkit-animation-duration: 0.9s;
+          animation:animatelogopart 0.9s;
 }
 
 .green {
@@ -351,52 +269,12 @@ body {
   margin-left: -8px;
   background-color: #4EBF49;
   border-radius: 5px;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 4;
   position: absolute;
-  -webkit-animation:animategreen;
-  -webkit-animation-duration: 1.2s;
-          animation:animategreen 1.2s;
-}
-
-@-webkit-keyframes animategreen{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 200px;
-            perspective: 200px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
-
-}
-
-@keyframes animategreen{
-  from{
-    top: -600px;
-    opacity:0;
-    -webkit-perspective: 200px;
-            perspective: 200px;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    } 
-  to{
-    top: 0;
-    opacity:1;
-    -webkit-perspective: none;
-            perspective: none;
-  }
-
+  -webkit-animation:animatelogopart;
+  -webkit-animation-duration: 1s;
+          animation:animatelogopart 1s;
 }
 
 h3 {
